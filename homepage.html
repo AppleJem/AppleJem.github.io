@@ -1,49 +1,95 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded',function(){
+                var correct= document.querySelector('.correct');
+                correct.addEventListener('click',function(){
+                    correct.style.backgroundColor='#98fb98';
+                    document.querySelector('#feedback1').innerHTML="Correct!";
+                    let incorrects = document.querySelectorAll('.incorrect');
+                    for (let k=0; k<incorrects.length; k++){
+                        incorrects[k].style.backgroundColor="";
+                    }
+                });
+                var incorrect= document.querySelectorAll('.incorrect');
+                for (let i=0; i<incorrect.length;i++){
+                    incorrect[i].addEventListener('click',function(){
+                        correct.style.backgroundColor="";
+                        for (let j=0; j<incorrect.length; j++){
+                            incorrect[j].style.backgroundColor="";
+                        }
+                        incorrect[i].style.backgroundColor='#ffc0cb';
+                        document.querySelector('#feedback1').innerHTML="incorrect!";
+                    });
+                }
 
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link href="site.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jem-Home</title>
-    <script>
-       
-    </script>
+                /*
+                let buttonn = document.getElementById('check');
+                buttonn.onclick() => {
+                    let ans = document.querySelector('#answer');
+                    if (ans.value === "221021"){
+                        ans.style.backgroundColor="#98fb98";
+                        document.querySelector('#feedback2').innerHTML="correct!";
+                    }
+                    else{
+                        document.querySelector('#feedback2').innerHTML="incorrect!";
+                        ans.style.backgroundColor="#ffc0cb";
+                    }
+                }
+                */
 
-</head>
 
-<body>
-    <div class="container">
-        <h1 class="header display-1">Hello World, I'm <abbr title="Jurong East Mall">Jem</abbr>!</h1>
-        
-        <div class="alert alert-dark alert-dismissible fade show" role="alert">
-            <h4 class="alert-heading">ALERT HEADING</h4>
-            This is a totally real alert!
-            <button class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
+
+            });
+
+            function submit(){
+                let ans = document.getElementById('answer');
+                feedback = document.getElementById('feedback2');
+                if (ans.value == "221021"){
+                    ans.style.backgroundColor="#98fb98";
+                    feedback.innerHTML="correct!";
+                }
+                else{
+                    ans.style.backgroundColor="#ffc0cb";
+                    feedback.innerHTML="incorrect!";
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Test change title!</h1>
         </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice choice cohecoeihcoiwheo</h2>
+                <hr>
+                <h3>我喜欢的人是谁?</h3>
+                    <button class="incorrect"> Kairoo</button>
+                    <button class="incorrect"> KieRu</button>
+                    <button class="correct"> 凯茹</button>
+                    <button class="incorrect"> Karu</button>
 
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button class="btn btn-danger">Button</button>
-            <button class="btn btn-outline-danger">DANGER</button>
-        </div>
-        <h2 class="display-2">Grid System</h2>
-        <section class="container">
-            <div class="row">
-                <div class="col">auto sized</div>
-                <div class="col">auto sized</div>
-                <div class="col">auto sized</div>
+                <p id="feedback1" class="feedback"></p>
             </div>
-        </section>
-        
-        <br><br>
-        <p class=" p-3 mb-2 bg-primary text-danger">
-            Additional Info Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis vero aperiam, aliquid ratione recusandae maiores corporis eaque adipisci veritatis est maxime. Voluptatem maxime culpa qui ullam quis repudiandae sed hic.
-        </p>
-    </div>
-</body>
 
-</html>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>When's our anniversary?</h3>
+                    <input type="text" placeholder="enter ddmmyy" id="answer">
+                    <button id="check" onclick="submit()">check</button>
+                <p id="feedback2" class = "feedback">placeholder</p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+        </html>
