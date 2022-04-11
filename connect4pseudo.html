@@ -1,0 +1,25 @@
+
+
+CHECKUP
+initiate pointer, letter, nummber, oneUp
+if (base Position == oneUp)
+    dotCount++
+    checkUp again using oneUp
+    if (dotCount==3){
+        returned true;
+    }
+else if (dotCount>0 and reversed) 
+<!-- if up direction already have something, we'll check down direction, otherwise
+just continue cycling through all directions  -->
+<!-- if checkUp is actually called from a previous checkDown, we'll not call
+checkDown AGAIN! -->
+    checkDown using base position
+else <!-- ie. if dotCount = 0 -->
+    do nothing, continue cycling through all directions
+
+
+
+
+we should reset the dotcount 
+    at the start of a new count
+or if it is not reversed
