@@ -3,7 +3,7 @@ let indicator = document.querySelector('#indicator');
 let winner = document.querySelector('#winner');
 
 let counter = 0;
-let color = ['red', 'blue', 'red','rgb(0, 115, 255)'];
+let color = ['red', 'blue', 'rgb(0, 115, 255)', 'red'];
 let letters = ['a','b','c','d','e','f','g'];
 let numbers = ['one','two','tre','for','fve','six'];
 let dotCount = 0;

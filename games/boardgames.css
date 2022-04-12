@@ -1,3 +1,5 @@
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@ div {
 }
 
 p {
-    text-align:center;
+    padding-top:2em;
 }
 
 .column {
