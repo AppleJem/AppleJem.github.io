@@ -3,7 +3,7 @@ let indicator = document.querySelector('#indicator');
 let winner = document.querySelector('#winner');
 
 let counter = 0;
-let color = ['red', 'blue', 'rgb(0, 115, 255)', 'red'];
+let color = ['red', 'blue', 'red','rgb(0, 115, 255)'];
 let letters = ['a','b','c','d','e','f','g'];
 let numbers = ['one','two','tre','for','fve','six'];
 let dotCount = 0;
@@ -12,7 +12,7 @@ for (let i=0; i<columns.length;i++){
     columns[i].addEventListener('click', function (){
         for (child of columns[i].children){
             if (child.innerHTML == ""){
-                child.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"/></svg>'
+                child.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>';
                 child.firstChild.setAttribute('class', color[counter%2]);
                 indicator.style.backgroundColor = color[counter%2+2];
                 let position = child.getAttribute('class').slice(-6);

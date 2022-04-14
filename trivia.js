@@ -29,7 +29,7 @@ function checkAns (ans){
         feedback2.innerText='Correct!';
         anniversary.setAttribute('disabled','');
         anniversarySubmit.setAttribute('disabled','');
-        
+            
     } else {
         feedback2.classList.add('text-danger');
         feedback2.innerText='Wrong!';
