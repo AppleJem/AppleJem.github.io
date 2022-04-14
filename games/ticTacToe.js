@@ -24,6 +24,7 @@ for (grid of grids){
             counter++;
             if (checkWin()){
                 winner.innerText = "Player 1 wins!";
+                winner.style.color='black';
                 winner = null;
                 return;
             }
