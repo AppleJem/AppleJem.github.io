@@ -1,0 +1,123 @@
+
+body {
+    background-color:black;
+    /* color:white; */
+}
+
+#cat {
+    position: absolute;
+    height:220px;
+    width:260px;
+    left: 1000px;
+    top: 100px;
+    transition:0.3s;
+}
+#catText{
+    position: absolute;
+    top: 100px;
+    left: 1046px;
+    height:70px;
+    width:170px;
+    transition:0.3s;
+}
+#catCon:hover #cat{
+    top:120px;
+}
+#catCon:hover #catText{
+    top:85px;
+}
+
+
+#fish {
+    position: absolute;
+    height:230px;
+    width:256px;
+    left: 300px;
+    top: 80px;
+    transition:0.3s;
+}
+#fishText {
+    position: absolute;
+    top: 240px;
+    left: 350px;
+    height:80px;
+    width:180px;
+    transition:0.3s;
+}
+#fishCon:hover #fish{
+    top:60px
+}
+#fishCon:hover #fishText {
+    top:250px;
+}
+
+
+#hamster {
+    position: absolute;
+    height:200px;
+    width:205px;
+    left: 320px;
+    top: 450px;
+    transition:0.3s;
+}
+#hamsterText{
+    position: absolute;
+    top: 526px;
+    left: 294px;
+    height:155px;
+    width:180px;
+    transition:0.3s;
+}
+#hamsterCon:hover #hamster{
+    top:430px;
+    left:335px;
+}
+#hamsterCon:hover #hamsterText {
+    top:533px;
+    left:287px;
+}
+
+
+#rabbit {
+    position: absolute;
+    height:220px;
+    width:205px;
+    top: 430px;
+    left: 1050px;
+    transition: 0.3s
+}
+#rabbitText{
+    position: absolute;
+    top: 570px;
+    left: 1050px;
+    height:80px;
+    width:170px;
+    transition:0.3s;
+}
+#rabbitCon:hover #rabbit{
+    top: 410px;
+}
+#rabbitCon:hover #rabbitText {
+    top:585px;
+}
+
+
+#pigContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pig {
+    position:absolute; 
+    top:50%;
+    left:50%;
+    margin-top:-175px;
+    margin-left:-170px;
+    height:350px;
+    width:340px;
+    transition:0.3;
+}
+
+
+
