@@ -1,5 +1,6 @@
 
 
+
 window.addEventListener("DOMContentLoaded", (event) => {
     const persons = document.querySelectorAll(".person");
     const selectedName = document.querySelector("#selectedName");
@@ -11,7 +12,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const sideBar = document.querySelector("aside");
     const done = document.querySelector("#done");
 
-    const colors = ["#ff595e","#ffca3a","#8ac926","#1982c4","#6a4c93", "#6f1d1b", "#2c6e49"]
+
+    const colors = ["#ff595e","#ffca3a","#8ac926","#1982c4","#6a4c93", "#6f1d1b", "#2c6e49", "#001d3d", "#b38d97"]
 
     let selectedNameData = "";
     let personList = [];
@@ -78,6 +80,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     //Calculate total number of shifts and safety breaches (jointed shifts, >12 hours in one day)
     check.addEventListener("click", (event) => {
+
+
         //clear out all colors and shift counts before running check
         for (dutySlot of dutySlots) {
             dutySlot.style.backgroundColor = "rgb(75, 75, 75)";

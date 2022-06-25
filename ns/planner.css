@@ -15,6 +15,7 @@ aside{
     padding:1rem;
     background-color:var(--sidebar-background);
     display:none;
+    transition:0.5s;
 }
 aside h1 {
     margin-top:3rem;
@@ -31,6 +32,9 @@ main {
     flex-grow:1;
 }
 
+button:hover {
+    filter: brightness(0.5);
+}
 
 .dutyDay td {
     background-color: var(--table-cell);
@@ -72,6 +76,9 @@ main {
     text-align:center;
     font-size:1.2em;
 }
+.person:hover {
+    filter: brightness(0.5);
+}
 
 
 #timings td{
@@ -91,6 +98,9 @@ main {
     padding: 0.5em;
     border-radius: 0.7em;
 }
+#deleter:hover{
+    filter: brightness(0.5);
+}
 
 #deleteAll {
     font-weight:700;
@@ -101,6 +111,9 @@ main {
     border: 1px solid black;
     text-align: center;
     padding: 1em 2em;
+}
+#deleteAll:hover {
+    filter: brightness(0.5);
 }
 
 #menuButton {
