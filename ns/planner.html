@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAD Duty Planner</title>
+    <link href="../cssReset.css" rel="stylesheet">
+    <link href="./planner.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <button id="menuButton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="2rem" height="2rem">
+        <path fill="#ffffff" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+        </svg>
+    </button>
+    <aside>
+        <h1>Namelist</h1>
+        <table id="namelist">
+            <tr>  <th>Name</th>  <th>Shifts</th>  </tr>
+            <tr>  <td class="person">Thanesh</td>  <td>&nbsp;</td>  </tr>
+            <tr>  <td class="person">Luqman</td>  <td>&nbsp;</td>  </tr>
+            <tr>  <td class="person">Hafiz</td>  <td>&nbsp;</td>  </tr>
+            <tr>  <td class="person">Kevin</td>  <td>&nbsp;</td>  </tr>
+            <tr>  <td class="person">Hock Yan</td>  <td>&nbsp;</td>  </tr>
+            <tr>  <td class="person">Jamal</td>  <td>&nbsp;</td>  </tr>
+        </table>
+        <p id="deleter">DELETER</p>
+        <p><button id="deleteAll">DELETE ALL</button></p>
+
+        <h2>Current Selected: <p id="selectedName"></p></h2>
+        <br>
+        <button id="check">Check</button>
+        <button id="done">Done</button>
+    </aside>
+    <main>
+        <section class="dutyDay">
+            <table id="timings">
+                <tr class="dayFirst"><td>1800-2200</td></tr>
+                <tr><td>2200-0200</td></tr>
+                <tr><td>0200-0600</td></tr>
+                <tr><td>0600-1000</td></tr>
+                <tr><td>1000-1400</td></tr>
+                <tr><td>1400-1800</td></tr>
+                <tr class="dayFirst"><td>1800-2200</td></tr>
+                <tr><td>2200-0200</td></tr>
+                <tr><td>0200-0600</td></tr>
+                <tr><td>0600-1000</td></tr>
+                <tr><td>1000-1400</td></tr>
+                <tr><td>1400-1800</td></tr>
+                <tr class="dayFirst"><td>1800-2200</td></tr>
+                <tr><td>2200-0200</td></tr>
+                <tr><td>0200-0600</td></tr>
+                <tr><td>0600-1000</td></tr>
+                <tr><td>1000-1400</td></tr>
+                <tr class="dayFinal"><td>1400-1800</td></tr>
+            </table>
+            <table id="shiftTable">
+                <tr class="dayFirst">  <td class="dutySlot"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr class="dayLast">  <td class="dutySlot"></td>  <td class="dutySlot"></td>  </tr>
+                <tr class="dayFirst">  <td class="dutySlot"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr class="dayLast">  <td class="dutySlot dayLast"></td>  <td class="dutySlot"></td>  </tr>
+                <tr class="dayFirst">  <td class="dutySlot"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr>  <td class="dutySlot left"></td>  <td class="dutySlot"></td>  </tr>
+                <tr class="dayFinal">  <td class="dutySlot"></td>  <td class="dutySlot"></td>  </tr>
+                
+            </table>
+
+        </section>
+    </main>
+
+    <script src="./planner.js"></script>
+</body>
+
+</html>
