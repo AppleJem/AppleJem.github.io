@@ -17,6 +17,8 @@ aside{
     background-color:var(--sidebar-background);
     display:none;
     transition:0.5s;
+    max-height:100vh;
+    overflow:auto;
 }
 aside h1 {
     margin-top:3rem;
