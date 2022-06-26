@@ -2,6 +2,7 @@
     --background-grey: rgb(42, 42, 42);
     --sidebar-background: rgb(0, 0, 0);
     --table-cell: rgb(75, 75, 75);
+    --table-cell-dark: rgb(30, 30, 30);
     --table-lines: rgb(255, 255, 255);
 }
 
@@ -35,6 +36,8 @@ main {
 button:hover {
     filter: brightness(0.5);
 }
+
+
 
 .dutyDay td {
     background-color: var(--table-cell);
@@ -85,6 +88,10 @@ button:hover {
     font-size:0.7em;
     width: 5em;
     height: 1.5em;
+}
+
+#prowlTable td {
+    background-color: var(--table-cell-dark);
 }
 
 #deleter {

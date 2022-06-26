@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const persons = document.querySelectorAll(".person");
     const selectedName = document.querySelector("#selectedName");
     const dutySlots = document.querySelectorAll(".dutySlot");
+    const prowlSlots = document.querySelectorAll(".prowlSlot");
     const check = document.querySelector("#check");
     const deleter = document.querySelector("#deleter");
     const deleteAll = document.querySelector("#deleteAll");
@@ -57,7 +58,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     })
 
-    //listener to update table based on selectedNameData
+    //listener to update dutyTable based on selectedNameData
     for (let j=0; j<dutySlots.length; j++) {
         dutySlots[j].addEventListener("click", (e) => {
             if (selectedNameData == "deleter") {
@@ -75,6 +76,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 })
             }
 
+        })
+    }
+
+    //listener to update prowlTable on click
+    for (let j=0; j<prowlSlots.length; j++) {
+        prowlSlots[j].addEventListener("click", () => {
+            if (selectedNameData == "deleter") {
+                prowlSlots[j].innerHTML = "";
+                prowlSlots[j].style.backgroundColor = "rgb(30, 30, 30)"
+            } else if (!prowlSlots[j].innerHTML || prowlSlots[j].innerHTML!=selectedNameData) { //if the cell is  empty OR is the cell data different from selected
+                prowlSlots[j].innerHTML = selectedNameData;
+            }
         })
     }
 
