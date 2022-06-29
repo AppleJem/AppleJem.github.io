@@ -1,4 +1,11 @@
 
+function changeName (target) {
+
+}
+
+function changeColor (target) {
+
+}
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -17,6 +24,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const colors = ["#ff595e","#ffca3a","#8ac926","#1982c4","#6a4c93", "#6f1d1b", "#2c6e49", "#001d3d", "#b38d97"]
 
     let selectedNameData = "";
+    let selectedNameData2 = "";
     let personList = [];
 
     //show and hide sidebar menu
@@ -85,8 +93,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
             if (selectedNameData == "deleter") {
                 prowlSlots[j].innerHTML = "";
                 prowlSlots[j].style.backgroundColor = "rgb(30, 30, 30)"
-            } else if (!prowlSlots[j].innerHTML || prowlSlots[j].innerHTML!=selectedNameData) { //if the cell is  empty OR is the cell data different from selected
+            } else if (!prowlSlots[j].innerHTML) { //if the box is empty
                 prowlSlots[j].innerHTML = selectedNameData;
+            } else if (prowlSlots[j].innerHTML!=selectedNameData) { //if the cell data different from selected
+                prowlSlots[j].innerHTML = prowlSlots[j].innerHTML + " & " + selectedNameData
             }
         })
     }

@@ -40,14 +40,17 @@ button:hover {
 }
 
 
+tr, td {
+    height: 2.5rem;
+    vertical-align:middle;
+    text-align:center;
+}
 
 .dutyDay td {
     background-color: var(--table-cell);
     border: 1px solid var(--table-lines);
-    padding:0.4em;
     width: 5em;
     height: 1.5em;
-    text-align: center;
 
 }
 
@@ -68,18 +71,16 @@ button:hover {
 #namelist {
     border-collapse: separate;
     border-spacing: 0.3em 0.5em;
-    text-align:center;
 }
 #namelist th {
     border: 1px solid var(--table-lines);
     padding: 0.4em 0.2em;
 }
 .person {
-    padding: 0.7em 0.2em;
     border-radius:0.5em;
     width: 8em;
-    text-align:center;
     font-size:1.2em;
+    height: 1.5rem;
 }
 .person:hover {
     filter: brightness(0.5);
@@ -89,17 +90,18 @@ button:hover {
 #timings td{
     font-size:0.7em;
     width: 5em;
-    height: 1.5em;
 }
 
 #prowlTable td {
     background-color: var(--table-cell-dark);
+    font-size:0.7em;
 }
+
 
 #deleter {
     background-color:#ffb0b0;
     color: rgb(46, 46, 46);
-    margin:1rem 0;
+    margin:0;
     border: 1px solid black;
     width: 8em;
     height: 1.5em;
@@ -116,10 +118,11 @@ button:hover {
     font-size: 1em;
     background-color:rgb(187, 0, 0);
     color: rgb(255, 255, 255);
-    margin:1rem 0;
+    margin: 0.4rem 0;
     border: 1px solid black;
     text-align: center;
     padding: 1em 2em;
+    border-radius:0.7em;
 }
 #deleteAll:hover {
     filter: brightness(0.5);
