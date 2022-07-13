@@ -1,0 +1,90 @@
+:root {
+    --primary-color: white;
+    --secondary-color: yellow;
+    --muted-text: rgb(188, 188, 188);
+    --card-color: rgb(74, 74, 74);
+    --primary-bg-color: #333;
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+    text-align:center;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+main h1 {
+    padding: 1rem;
+    font-size:2rem;
+    font-weight:400;
+}
+
+
+/* #region main letter grid */
+
+#word-display {
+    width:80%;
+    margin: 1rem;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6, 3.2rem);
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+}
+
+.letter {
+    background-color:var(--card-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2em;
+    transition: background-color 0.2s ease-out;
+}
+
+
+/* #endregion */
+
+#guess-textbox {
+    max-width:80%;
+    font-size:2em;
+    margin:1rem;
+}
+
+#guess-button {
+    font-size:2em;
+}
+
+#alert-message {
+    margin: 1rem;
+}
+
+/* #region KEYBOARD */
+#keyboard span {
+    display:inline-block;
+    font-size:2em;
+    width:2rem;
+    height:2.4rem;
+    background-color:var(--card-color);
+}
+
+#keyboard div {
+    margin: 1rem;
+}
+/* #endregion */
+
+/* #region COMPONENTS */
+
+.btn {
+    margin:auto;
+    font-size: 1.2em;
+    border:unset;
+    background-color:var(--muted-text)
+}
+/* #endregion */

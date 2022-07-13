@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jem Wordle</title>
+    <link href="../../cssReset.css" rel="stylesheet">
+    <link href="./wordle.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>WORDLE</h1>
+        <button type="button" id="enter-word-button" class="btn">Enter Word Here</button>
+        <section id="word-display">
+            <span class="letter row1"></span>
+            <span class="letter row1"></span>
+            <span class="letter row1"></span>
+            <span class="letter row1"></span>
+            <span class="letter row1"></span>
+
+            <span class="letter row2"></span>
+            <span class="letter row2"></span>
+            <span class="letter row2"></span>
+            <span class="letter row2"></span>
+            <span class="letter row2"></span>
+
+            <span class="letter row3"></span>
+            <span class="letter row3"></span>
+            <span class="letter row3"></span>
+            <span class="letter row3"></span>
+            <span class="letter row3"></span>
+
+            <span class="letter row4"></span>
+            <span class="letter row4"></span>
+            <span class="letter row4"></span>
+            <span class="letter row4"></span>
+            <span class="letter row4"></span>
+
+            <span class="letter row5"></span>
+            <span class="letter row5"></span>
+            <span class="letter row5"></span>
+            <span class="letter row5"></span>
+            <span class="letter row5"></span>
+
+            <span class="letter row6"></span>
+            <span class="letter row6"></span>
+            <span class="letter row6"></span>
+            <span class="letter row6"></span>
+            <span class="letter row6"></span>
+        </section>
+
+        <textarea id="guess-textbox" rows="1" wrap="off"></textarea>
+        <button type="button" id="guess-button" class="btn">Try it!</button>
+        <div id="alert-message"></div>
+        <script src="./wordle.js"></script>
+
+        <div id="keyboard">
+            <div>
+                <span id="q">q</span>
+                <span id="w">w</span>
+                <span id="e">e</span>
+                <span id="r">r</span>
+                <span id="t">t</span>
+                <span id="y">y</span>
+                <span id="u">u</span>
+                <span id="i">i</span>
+                <span id="o">o</span>
+                <span id="p">p</span>
+            </div>
+            <div>
+                <span id="a">a</span>
+                <span id="s">s</span>
+                <span id="d">d</span>
+                <span id="f">f</span>
+                <span id="g">g</span>
+                <span id="h">h</span>
+                <span id="j">j</span>
+                <span id="k">k</span>
+                <span id="l">l</span>
+            </div>
+            <div>
+                <span id="z">z</span>
+                <span id="x">x</span>
+                <span id="c">c</span>
+                <span id="v">v</span>
+                <span id="b">b</span>
+                <span id="n">n</span>
+                <span id="m">m</span>
+            </div>
+        </div>
+    </main>
+    
+
+
+</body>
