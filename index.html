@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jem-Home</title>
     <script>
-       
+
     </script>
 
 </head>
@@ -21,7 +21,8 @@
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Jamjamjam</span>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
@@ -35,57 +36,73 @@
                     <a class="nav-link" href="games/Wordle/wordle.html">Wordle</a>
                     <!-- wrong file anem damn it -->
                     <div class="navbar-nav nav-item dropdown ms-md-auto">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        One of these links work
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            One of these links work
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Is it me?</a></li>
-                        <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Is it me?</a></li>
-                        <li><a class="dropdown-item" href="#">Is it me?</a></li>
+                            <li><a class="dropdown-item" href="#">Is it me?</a></li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Is it
+                                    me?</a></li>
+                            <li><a class="dropdown-item" href="#">Is it me?</a></li>
                         </ul>
-                    </div>  
+                    </div>
                 </div>
-                
+
             </div>
-            
-              
-              
+
+
+
         </div>
     </nav>
 
-    <h1 class="display-1 text-center"><small class='text-muted'>Hello World, I'm</small> <abbr title="Jurong East Mall">Jem</abbr>!</h1>
-    <p class="text-center lead">Here are some notes on Bootstrap</p>
+    <h1 class="display-1 text-center"><small class='text-muted'>Countdown till 凯茹 ❤️ 逸凡 reunites!</small></h1>
+    <h1 id="countdown-timer" class="display-1 text-center fw-bold text-dark massive-timer">calculating...</h1>
     <div class="container">
 
-        <label for="fullname">What's my full name?</label>
-        <select class="form-select m-1" id="fullname">
-            <option selected>--select--</option>
-            <option>Zhang Yifan Jem</option>
-            <option>Jem Yifan Zhang</option>
-            <option>Jem Zhang Yifan</option>
 
-        </select>
-
-        
-        <div class="alert alert-dark alert-dismissible fade show" role="alert">
-            <h4 class="alert-heading">ALERT HEADING</h4>
-            This is a totally real alert!
-            <button class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
-        </div>
-
-
-        <h2 class="display-2">Grid System</h2>
-        <section class="container">
-            <div class="row">
-                <div class="col-sm-2 bg-primary text-white">auto sized</div>
-                <div class="col-sm-8 bg-secondary text-white">auto sized</div>
-                <div class="col-sm-2 bg-warning ">auto sized</div>
-            </div>
-        </section>
-        
-        <br><br>
 
     </div>
+
+    <script>
+        // --- Countdown Timer ---
+
+        // Set the date we're counting down to (Year, Month (0-indexed), Day, Hour, Minute, Second)
+        // Example: December 25, 2024 at 00:00:00
+        const countdownDate = new Date("2025-06-08T00:00:00").getTime();
+
+        // Get the HTML element where the timer will be displayed
+        const timerElement = document.getElementById("countdown-timer");
+
+        // Update the countdown every 1 second
+        const interval = setInterval(function () {
+
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countdownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown-timer"
+            // Update the innerHTML of the h1 directly
+            timerElement.innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(interval);
+                timerElement.innerHTML = " reunited!"; // Update the h1 directly
+            }
+        }, 1000); // 1000 milliseconds = 1 second
+
+        // --- End Countdown Timer ---
+    </script>
 </body>
 
 </html>
